@@ -24,4 +24,3 @@ WebUI.setText(findTestObject('Object Repository/autentikasi/password'), 'secret_
 WebUI.click(findTestObject('Object Repository/autentikasi/button-login'))
 WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/success-login'), 0)
 
-WebUI.closeBrowser()
