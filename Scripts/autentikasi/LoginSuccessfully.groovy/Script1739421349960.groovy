@@ -19,10 +19,8 @@ import org.openqa.selenium.Keys as Keys
 
 import customKeywords.AuthHelper as Auth
 
-WebUI.openBrowser('')
+WebUI.openBrowser(GlobalVariable.baseURL)
 
-WebUI.navigateToUrl('https://www.saucedemo.com/v1/')
-
-CustomKeywords.'customKeywords.AuthHelper.login'("standard_user", "secret_sauce") 
+CustomKeywords.'customKeywords.AuthHelper.login'(GlobalVariable.username, GlobalVariable.password) 
 
 CustomKeywords.'customKeywords.AuthHelper.LoginSuccess'()
