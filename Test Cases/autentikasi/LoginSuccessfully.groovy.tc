@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LoginSuccessfully.groovy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b3c56c4e-f996-49f6-80a1-44073d1ed87d</testCaseGuid>
+</TestCaseEntity>
