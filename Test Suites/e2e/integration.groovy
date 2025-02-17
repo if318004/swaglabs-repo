@@ -34,8 +34,11 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 @SetUp(skipped = true) // Please change skipped to be false to activate this method.
 def setUp() {
 	// Put your code here.
-	WebUI.callTestCase(findTestCase('Test Cases/autentikasi/login'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/autentikasi/LoginSuccessfully.groovy'), [:], FailureHandling.STOP_ON_FAILURE)
 	WebUI.callTestCase(findTestCase('Test Cases/addtocart/addtocart'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/checkout/checkout'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/About/about'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Test Cases/autentikasi/logout'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
 /**
