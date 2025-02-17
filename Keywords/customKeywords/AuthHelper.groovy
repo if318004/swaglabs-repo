@@ -22,13 +22,13 @@ import internal.GlobalVariable
 
 public class AuthHelper {
 	@Keyword
-	
+
 	def login(String username, String password){
 		WebUI.setText(findTestObject('Object Repository/autentikasi/username'), username)
 		WebUI.setText(findTestObject('Object Repository/autentikasi/password'), password)
 		WebUI.click(findTestObject('Object Repository/autentikasi/button-login'))
 	}
-	
+
 	def LoginSuccess() {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/success-login'), 0)
 	}
