@@ -1,4 +1,5 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -17,9 +18,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.WebElement
+import java.util.List
+import java.util.Collections
+
 WebUI.callTestCase(findTestCase('Test Cases/autentikasi/LoginSuccessfully.groovy'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/product-management/sorting'))
 
 WebUI.click(findTestObject('Object Repository/product-management/z to a'))
 
+List<String> actualProductName = []
+for (int i = 0; i<6; i++) {
+	String productName = WebUI.getText(findTestObject("Object Repository/product-management/list-all-product", [('index') : i]))
+    actualProductName.add(productName)
+	}
+
+	List<String> expectedProductName = new ArrayList<>(actualProductName)
+	expectedProductName.sort(Collections.reverseOrder())
+	
+	// Verifikasi hasil
+	WebUI.verifyEqual(actualProductName, expectedProductName)
+	
+	// Tutup browser
+	WebUI.closeBrowser()
