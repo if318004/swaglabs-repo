@@ -23,4 +23,4 @@ WebUI.click(findTestObject('Object Repository/autentikasi/burger-button'))
 
 WebUI.click(findTestObject('Object Repository/autentikasi/logout'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/button-login'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/button-login'), GlobalVariable.timeout)

@@ -21,5 +21,5 @@ WebUI.callTestCase(findTestCase('Test Cases/autentikasi/login'), [:], FailureHan
 
 WebUI.click(findTestObject('Object Repository/addtocart/addtocart'))
 WebUI.click(findTestObject('Object Repository/addtocart/cart'))
-WebUI.verifyElementPresent(findTestObject('Object Repository/addtocart/pagecart'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/addtocart/pagecart'), GlobalVariable.timeout)
 

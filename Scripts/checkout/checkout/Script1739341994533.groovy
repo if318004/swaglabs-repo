@@ -31,7 +31,7 @@ WebUI.click(findTestObject('Object Repository/checkout/continue button'))
 
 WebUI.click(findTestObject('Object Repository/checkout/finish button'))
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/checkout/success checkout'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/checkout/success checkout'), GlobalVariable.timeout)
 
 WebUI.closeBrowser()
 

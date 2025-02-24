@@ -24,4 +24,9 @@
       <initValue>10</initValue>
       <name>timeout</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'locked_out_user'</initValue>
+      <name>invalidpassword</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
