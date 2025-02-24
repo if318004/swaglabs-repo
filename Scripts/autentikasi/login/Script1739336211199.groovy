@@ -19,8 +19,8 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser("https://www.saucedemo.com/v1/")
 
-WebUI.setText(findTestObject('Object Repository/autentikasi/username'), 'standard_user')
-WebUI.setText(findTestObject('Object Repository/autentikasi/password'), 'secret_sauce')
+WebUI.setText(findTestObject('Object Repository/autentikasi/username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Object Repository/autentikasi/password'), GlobalVariable.password)
 WebUI.click(findTestObject('Object Repository/autentikasi/button-login'))
-WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/success-login'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/autentikasi/success-login'), GlobalVariable.timeout)
 

@@ -19,4 +19,9 @@
       <initValue>'https://www.saucedemo.com/v1/'</initValue>
       <name>baseURL</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10</initValue>
+      <name>timeout</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
